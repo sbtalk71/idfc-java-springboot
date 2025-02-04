@@ -18,6 +18,8 @@ public class Main2 {
 		 
 		 p=te;
 		 System.out.println(p.getDetails());
+		 
+		 System.out.println(e);
 
 	}
 

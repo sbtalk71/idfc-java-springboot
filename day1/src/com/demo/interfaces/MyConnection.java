@@ -8,7 +8,8 @@ public interface MyConnection {
 	public String getDbDetails();
 	
 	public default String getProductVersion() {
-		throw new UnsupportedOperationException("not yet implemented..");
+		myprivateMethod();
+		return "I am done";
 	}
 	
 	public static void mystaticMethod() {
