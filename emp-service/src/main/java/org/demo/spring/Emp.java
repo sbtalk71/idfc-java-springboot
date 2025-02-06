@@ -1,12 +1,9 @@
-package com.demo.spring.entity;
+package org.demo.spring;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.Size;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
 @Entity
@@ -18,7 +15,6 @@ public class Emp {
 	private Integer empId;
 	
 	@Column(name="NAME")
-	@Size(min = 5,message = "Name must be min 5 letters")
 	private String name;
 	
 	@Column(name="ADDRESS")

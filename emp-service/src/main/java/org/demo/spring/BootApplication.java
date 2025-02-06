@@ -15,10 +15,12 @@ public class BootApplication {
 		
 		ApplicationContext ctx =SpringApplication.run(BootApplication.class, args);
 		
-		WriterApp app= (WriterApp)ctx.getBean("writerApp");
+		/*
+		 * WriterApp app= (WriterApp)ctx.getBean("writerApp");
+		 * 
+		 * app.printText("Hello there");
+		 */
 		
-		app.printText("Hello there");
-
 	}
 
 }
