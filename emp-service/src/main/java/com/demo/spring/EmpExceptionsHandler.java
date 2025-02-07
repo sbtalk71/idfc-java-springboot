@@ -3,6 +3,7 @@ package com.demo.spring;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -15,7 +16,7 @@ public class EmpExceptionsHandler {
 
 	@ExceptionHandler(EmpNotFoundException.class)
 	public ResponseEntity<ResponseMessage> handleException(EmpNotFoundException ex){
-		return ResponseEntity.ok(new ResponseMessage(ex.getMessage()));
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ResponseMessage(ex.getMessage()));
 	}
 	
 	@ExceptionHandler(EmpExistsException.class)
