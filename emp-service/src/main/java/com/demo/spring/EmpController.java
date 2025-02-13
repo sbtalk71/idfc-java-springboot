@@ -25,7 +25,7 @@ import jakarta.validation.Valid;
 @RequestMapping("/emp")
 public class EmpController {
 
-	@Autowired
+	@Autowired 
 	EmpService empService;
 	
 	Logger logger=LoggerFactory.getLogger(this.getClass());
